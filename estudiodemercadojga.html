@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estudio de Mercado Integral y Proyecciones Financieras 2025-2028 para Lockers JGA México. Elaborado por somoslazaro.marketing">
+    <meta name="author" content="somoslazaro.marketing">
+    <title>Master Plan 2025-2028 | Lockers JGA México</title>
+    
+    <!-- Fuentes Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Identidad Corporativa */
+            --brand-primary: #CC0066;       /* Lázaro Pink - Acción & Energía */
+            --brand-accent: #FF3385;        /* Pink Highlight */
+            --brand-dark: #020617;          /* Negro Absoluto */
+            --brand-navy: #0F172A;          /* Navy Industrial */
+            --brand-steel: #334155;         /* Gris Acero */
+            
+            /* Fondos */
+            --bg-body: #F8FAFC;             /* Blanco Humo */
+            --bg-card-light: #FFFFFF;       /* Blanco Puro */
+            --bg-card-dark: #1E293B;        /* Slate Oscuro */
+            
+            /* Tipografía & Contraste */
+            --text-main: #0F172A;           /* Texto Oscuro sobre Claro */
+            --text-body: #475569;           /* Texto Gris sobre Claro */
+            --text-light: #F1F5F9;          /* Texto Claro sobre Oscuro */
+            --text-dim: #94A3B8;            /* Texto Atenuado sobre Oscuro */
+            
+            /* Datos Financieros */
+            --profit: #10B981;              /* Verde Financiero */
+            --loss: #EF4444;                /* Rojo Alerta */
+            --data: #0EA5E9;                /* Azul Datos */
+            
+            /* UI */
+            --radius: 12px;
+            --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-glow: 0 0 20px rgba(204, 0, 102, 0.25);
+        }
+
+        /* Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Tipografía */
+        h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+        h1 { font-size: 3.5rem; line-height: 1.1; color: var(--brand-navy); font-weight: 700; }
+        h2 { font-size: 2.5rem; margin-bottom: 2rem; position: relative; display: inline-block; color: var(--brand-navy); }
+        .bg-dark h2 { color: white; }
+        h2::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 80px; height: 5px; background: var(--brand-primary); }
+        
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .text-gradient { background: linear-gradient(90deg, var(--brand-primary), #FF3385); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Estructura */
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 100px 0; border-bottom: 1px solid #E2E8F0; }
+        .bg-dark { background-color: var(--brand-navy); color: var(--text-dim); border-bottom: none; }
+        
+        /* Navegación */
+        header {
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #E2E8F0;
+            position: fixed; top: 0; width: 100%; z-index: 1000; height: 80px; display: flex; align-items: center;
+        }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.6rem; color: var(--brand-navy); letter-spacing: -1px; }
+        .logo span { color: var(--brand-primary); }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--brand-navy); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--brand-primary); }
+
+        /* Botones */
+        .btn { padding: 12px 30px; border-radius: 50px; font-family: 'Oswald', sans-serif; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all 0.3s; cursor: pointer; border: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 10px; }
+        .btn-primary { background: var(--brand-primary); color: white; box-shadow: var(--shadow-glow); }
+        .btn-primary:hover { background: #A80054; transform: translateY(-2px); }
+        .btn-outline { border: 2px solid var(--brand-navy); color: var(--brand-navy); background: transparent; }
+        .btn-outline:hover { background: var(--brand-navy); color: white; }
+
+        /* Cards System - STRICT COLOR SEPARATION */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        
+        /* Card Light (Fondo Blanco, Texto Oscuro) */
+        .card {
+            background: var(--bg-card-light);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-card);
+            border: 1px solid #E2E8F0;
+            color: var(--text-main) !important; /* FORZAR COLOR */
+        }
+        .card h3, .card h4 { color: var(--brand-navy); margin-bottom: 15px; }
+        .card p, .card li { color: var(--text-body); font-size: 1rem; }
+        .card-icon { font-size: 2.5rem; color: var(--brand-primary); margin-bottom: 20px; }
+
+        /* Card Dark (Fondo Oscuro, Texto Claro) */
+        .card-dark {
+            background: #1E293B;
+            padding: 40px;
+            border-radius: var(--radius);
+            border: 1px solid #334155;
+            color: var(--text-light) !important; /* FORZAR COLOR */
+        }
+        .card-dark h3, .card-dark h4 { color: white; margin-bottom: 15px; }
+        .card-dark p, .card-dark li { color: #CBD5E1; font-size: 1rem; }
+        .card-dark .card-icon { color: var(--brand-primary); }
+
+        /* Financial Tables - EL FIX DEFINITIVO (Dark Mode Financials) */
+        .financial-dashboard {
+            background: #0B1120; /* Casi negro */
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid #1E293B;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .fin-table { width: 100%; border-collapse: collapse; }
+        .fin-table th {
+            background: #1E293B;
+            color: #94A3B8;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            text-align: right;
+            padding: 20px;
+            border-bottom: 1px solid #334155;
+        }
+        .fin-table th:first-child { text-align: left; color: white; font-weight: 700; }
+        .fin-table td {
+            padding: 20px;
+            text-align: right;
+            color: #E2E8F0; /* Blanco Hueso - ALTO CONTRASTE */
+            border-bottom: 1px solid #1E293B;
+            font-family: 'Inter', sans-serif;
+            font-variant-numeric: tabular-nums;
+        }
+        .fin-table td:first-child { text-align: left; color: #94A3B8; font-weight: 500; }
+        .fin-row-highlight { background: rgba(204, 0, 102, 0.05); }
+        .fin-row-total td { color: white; font-weight: 700; font-size: 1.1rem; border-top: 2px solid var(--brand-primary); }
+        .positive { color: var(--profit) !important; }
+        .negative { color: var(--loss) !important; }
+
+        /* Technical Specs Table */
+        .tech-table { width: 100%; border-collapse: collapse; background: white; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-card); }
+        .tech-table th { background: var(--brand-navy); color: white; padding: 18px; text-align: left; font-family: 'Oswald', sans-serif; }
+        .tech-table td { padding: 16px; border-bottom: 1px solid #E2E8F0; color: var(--text-main); }
+        .tech-table tr:hover { background: #F8FAFC; }
+
+        /* Footer */
+        footer { background: var(--brand-navy); padding: 80px 0 30px; color: white; border-top: 6px solid var(--brand-primary); }
+        .footer-links a { color: #94A3B8; display: block; margin-bottom: 12px; text-decoration: none; transition: 0.3s; }
+        .footer-links a:hover { color: var(--brand-primary); padding-left: 5px; }
+        .signature { text-align: center; border-top: 1px solid #1E293B; padding-top: 30px; margin-top: 50px; color: #64748B; font-size: 0.85rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            .nav-links { display: none; }
+            .card, .card-dark { padding: 25px; }
+            .fin-table { display: block; overflow-x: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-inner">
+            <div class="logo">
+                <i class="fas fa-cube" style="margin-right: 10px;"></i> LOCKERS<span>JGA</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#biblia">Specs Técnicas</a></li>
+                    <li><a href="#mercado">Market Intel</a></li>
+                    <li><a href="#competencia">FODA</a></li>
+                    <li><a href="#digital">Estrategia 360</a></li>
+                    <li><a href="#financiero">Finanzas</a></li>
+                </ul>
+            </nav>
+            <a href="#download" class="btn btn-primary" onclick="alert('Generando PDF completo...');">
+                <i class="fas fa-file-pdf"></i> Download
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section" style="padding-top: 180px; background: radial-gradient(circle at top right, rgba(204,0,102,0.05), transparent);">
+        <div class="container">
+            <div style="display: flex; gap: 10px; margin-bottom: 25px;">
+                <span style="background: #FEF2F2; color: #DC2626; padding: 5px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; border: 1px solid #FCA5A5;">CONFIDENCIAL</span>
+                <span style="background: #F0F9FF; color: #0284C7; padding: 5px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; border: 1px solid #BAE6FD;">VERSIÓN 3.0</span>
+            </div>
+            <h1>Master Plan Estratégico <br> <span class="text-gradient">Lockers JGA 2025-2028</span></h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin-top: 25px; color: var(--text-body);">
+                Análisis exhaustivo, reingeniería de producto y proyección financiera para dominar el mercado de almacenamiento industrial en México.
+            </p>
+            
+            <div style="display: flex; gap: 40px; margin-top: 60px;">
+                <div>
+                    <h3 class="text-gradient" style="font-size: 2.5rem; margin-bottom: 0;">19.6%</h3>
+                    <p style="font-size: 0.9rem; text-transform: uppercase; font-weight: 600;">CAGR México</p>
+                </div>
+                <div>
+                    <h3 class="text-gradient" style="font-size: 2.5rem; margin-bottom: 0;">$150M</h3>
+                    <p style="font-size: 0.9rem; text-transform: uppercase; font-weight: 600;">TAM (Total Addressable Market)</p>
+                </div>
+                <div>
+                    <h3 class="text-gradient" style="font-size: 2.5rem; margin-bottom: 0;">3 Años</h3>
+                    <p style="font-size: 0.9rem; text-transform: uppercase; font-weight: 600;">Horizonte Retorno</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. LA BIBLIA TÉCNICA (PRODUCTO) -->
+    <section id="biblia" class="section bg-dark">
+        <div class="container">
+            <h2>1. La Biblia Técnica de JGA</h2>
+            <p>Especificaciones innegociables para aplastar a la competencia china y retail.</p>
+
+            <div class="card-grid" style="margin-top: 40px;">
+                <!-- Acero -->
+                <div class="card-dark">
+                    <div class="card-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Línea Acero Industrial</h3>
+                    <p>El caballo de batalla. Indestructible.</p>
+                    <ul style="list-style: none; margin-top: 20px; border-top: 1px solid #334155; padding-top: 20px;">
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: var(--brand-primary); margin-right: 10px;"></i><strong>Lámina:</strong> Acero al Carbón Rolado en Frío (CRS).</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: var(--brand-primary); margin-right: 10px;"></i><strong>Calibres Reales:</strong> 
+                            <br><span class="mono" style="color: #94A3B8; margin-left: 25px;">Puerta: Cal 22 (0.76mm)</span>
+                            <br><span class="mono" style="color: #94A3B8; margin-left: 25px;">Cuerpo: Cal 24 (0.61mm)</span>
+                        </li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: var(--brand-primary); margin-right: 10px;"></i><strong>Pintura:</strong> Epóxica Poliéster Híbrida, horneada a 200°C por 15 min. (Resistencia 500 hrs cámara salina).</li>
+                        <li><i class="fas fa-check" style="color: var(--brand-primary); margin-right: 10px;"></i><strong>Seguridad:</strong> Portacandado cromado de alto calibre, no plástico.</li>
+                    </ul>
+                </div>
+
+                <!-- PVC -->
+                <div class="card-dark">
+                    <div class="card-icon"><i class="fas fa-swimmer"></i></div>
+                    <h3>Línea PVC Anti-Corrosión</h3>
+                    <p>Dominio total en zonas costeras y húmedas.</p>
+                    <ul style="list-style: none; margin-top: 20px; border-top: 1px solid #334155; padding-top: 20px;">
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: var(--brand-primary); margin-right: 10px;"></i><strong>Material:</strong> Polímero plástico de alta ingeniería (HDPE).</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: var(--brand-primary); margin-right: 10px;"></i><strong>Propiedad:</strong> 100% Hidrófugo. Inmune al óxido, salitre y cloro.</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check" style="color: var(--brand-primary); margin-right: 10px;"></i><strong>Diseño:</strong> Modular armable (patente pendiente).</li>
+                        <li><i class="fas fa-check" style="color: var(--brand-primary); margin-right: 10px;"></i><strong>Garantía:</strong> 10 años (VS 1 año de la competencia metálica en costa).</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; padding: 20px; background: rgba(204, 0, 102, 0.1); border: 1px solid var(--brand-primary); border-radius: var(--radius);">
+                <h4 style="color: white; margin-bottom: 10px;"><i class="fas fa-exclamation-triangle"></i> La Trampa del Calibre 26</h4>
+                <p style="color: #CBD5E1; margin-bottom: 0;">
+                    El 90% de los lockers vendidos en MercadoLibre y Home Depot son <strong>Calibre 26 o 28</strong>. Son hojas de papel que se abollan con una patada. JGA no compite ahí. JGA vende activos fijos duraderos. <strong>Ese es nuestro argumento de venta #1.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. INTELIGENCIA DE MERCADO -->
+    <section id="mercado" class="section">
+        <div class="container">
+            <h2>2. Inteligencia de Mercado</h2>
+            <p>Tamaño de la oportunidad y dónde atacar.</p>
+
+            <!-- TAM SAM SOM -->
+            <div class="card-grid">
+                <div class="card">
+                    <h4 style="color: var(--text-dim); font-size: 0.9rem;">TAM (Total Addressable Market)</h4>
+                    <h3 style="font-size: 2.5rem; color: var(--brand-primary);">$150M USD</h3>
+                    <p>Mercado total de mobiliario de almacenamiento industrial y escolar en México.</p>
+                </div>
+                <div class="card">
+                    <h4 style="color: var(--text-dim); font-size: 0.9rem;">SAM (Serviceable Available Market)</h4>
+                    <h3 style="font-size: 2.5rem; color: var(--brand-primary);">$45M USD</h3>
+                    <p>Segmento Premium/Industrial en CDMX, Bajío y Norte (Nearshoring).</p>
+                </div>
+                <div class="card">
+                    <h4 style="color: var(--text-dim); font-size: 0.9rem;">SOM (Serviceable Obtainable Market)</h4>
+                    <h3 style="font-size: 2.5rem; color: var(--brand-primary);">$2.5M USD</h3>
+                    <p>Meta de JGA: Capturar el 5% del SAM en los próximos 3 años.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px;">
+                <h3>Análisis de Buyer Personas (Quién Compra)</h3>
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Arquetipo</th>
+                            <th>Dolor Principal</th>
+                            <th>Factor Decisivo</th>
+                            <th>Mensaje JGA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>El Gerente de Planta (Ingeniero)</strong></td>
+                            <td>Lockers actuales abollados y rotos en 6 meses.</td>
+                            <td>Durabilidad (No quiere volver a comprar en 10 años).</td>
+                            <td>"Acero Calibre 24. Garantía 5 años. Uso Rudo Real."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>El Director de Escuela</strong></td>
+                            <td>Vandalismo y Grafiti. Estética fea.</td>
+                            <td>Estética y Seguridad.</td>
+                            <td>"Colores institucionales. Pintura Epóxica lavable. Antivandálico."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>El Gerente de Hotel (Cancún)</strong></td>
+                            <td>El óxido se come los lockers en 3 meses por la sal.</td>
+                            <td>Resistencia a Corrosión.</td>
+                            <td>"Línea PVC. Inmune al salitre. Garantía 10 años."</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. COMPETENCIA & FODA -->
+    <section id="competencia" class="section bg-light">
+        <div class="container">
+            <h2>3. Matriz Competitiva</h2>
+            <p>Conocemos al enemigo para vencerlo.</p>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h4 style="color: #EF4444;">Competencia Directa (PM Steel, Muebles Cook)</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-minus-circle" style="color: #EF4444;"></i> <strong>Debilidad:</strong> Tiempos de entrega largos (4-6 semanas).</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-minus-circle" style="color: #EF4444;"></i> <strong>Debilidad:</strong> Atención al cliente burocrática.</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--brand-primary);"></i> <strong>Oportunidad JGA:</strong> "Cotización en 2 horas, Entrega en 2 semanas".</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4 style="color: #F59E0B;">Competencia Indirecta (Home Depot, Office Depot)</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-minus-circle" style="color: #F59E0B;"></i> <strong>Debilidad:</strong> Calidad pésima (Calibre 26/28).</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-minus-circle" style="color: #F59E0B;"></i> <strong>Debilidad:</strong> Medidas estándar, no personalizables.</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--brand-primary);"></i> <strong>Oportunidad JGA:</strong> "No tires tu dinero en lámina de papel. Compra directo de fábrica."</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4 style="color: var(--brand-navy);">Competencia Digital (MercadoLibre)</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-minus-circle" style="color: var(--brand-navy);"></i> <strong>Debilidad:</strong> Producto chino desarmado (Flat pack).</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-minus-circle" style="color: var(--brand-navy);"></i> <strong>Debilidad:</strong> Sin refacciones ni garantía real.</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--brand-primary);"></i> <strong>Oportunidad JGA:</strong> "Te lo entregamos armado y soldado. Listo para usar."</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ESTRATEGIA DIGITAL 360 -->
+    <section id="digital" class="section">
+        <div class="container">
+            <h2>4. Estrategia Digital 360°</h2>
+            <p>Arquitectura de adquisición de clientes B2B.</p>
+
+            <div class="card-grid">
+                <!-- SEO -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-search"></i></div>
+                    <h4>SEO (Orgánico)</h4>
+                    <p>Objetivo: Dominar la intención de búsqueda comercial.</p>
+                    <div style="background: #F1F5F9; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                        <strong style="display: block; font-size: 0.8rem; color: #64748B; margin-bottom: 5px;">KEYWORDS TRANSACCIONALES</strong>
+                        <ul style="list-style: none; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--brand-navy);">
+                            <li>"fábrica lockers cdmx" (Vol: 1.2k)</li>
+                            <li>"lockers industriales precio" (Vol: 800)</li>
+                            <li>"lockers acero calibre 24" (Vol: 300)</li>
+                            <li>"lockers plástico alberca" (Vol: 250)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SEM -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h4>SEM (Google Ads)</h4>
+                    <p>Presupuesto Sugerido Inicial: $15,000 MXN / mes.</p>
+                    <ul style="margin-top: 15px; list-style: none;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="color: var(--brand-primary);"></i> <strong>Campaña Búsqueda:</strong> "Lockers Industriales" (No escolares baratos).</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-arrow-right" style="color: var(--brand-primary);"></i> <strong>Negativas:</strong> "baratos", "usados", "segunda mano", "madera".</li>
+                        <li><i class="fas fa-arrow-right" style="color: var(--brand-primary);"></i> <strong>CPA Objetivo:</strong> $150 MXN por lead calificado.</li>
+                    </ul>
+                </div>
+
+                <!-- Social & Content -->
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-share-alt"></i></div>
+                    <h4>Social Selling (LinkedIn)</h4>
+                    <p>Estrategia Sniper para B2B.</p>
+                    <ul style="margin-top: 15px; list-style: none;">
+                        <li style="margin-bottom: 10px;"><i class="fab fa-linkedin" style="color: #0A66C2;"></i> Conectar con "Gerentes de Compras" y "Facility Managers".</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-video" style="color: #FF0000;"></i> YouTube: Videos de "Prueba de Golpe" (Martillo vs Locker JGA).</li>
+                        <li><i class="fas fa-robot" style="color: var(--brand-primary);"></i> <strong>Automatización:</strong> Email sequence post-descarga de catálogo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FINANZAS (THE FIX) -->
+    <section id="financiero" class="section bg-dark">
+        <div class="container">
+            <h2 style="color: white;">5. Proyección Financiera 2025-2028</h2>
+            <p style="color: #94A3B8; margin-bottom: 40px;">Escenario conservador con penetración progresiva. Cifras en MXN.</p>
+
+            <div class="financial-dashboard">
+                <table class="fin-table">
+                    <thead>
+                        <tr>
+                            <th>CONCEPTO (P&L)</th>
+                            <th>AÑO 1 (2025)</th>
+                            <th>AÑO 2 (2026)</th>
+                            <th>AÑO 3 (2027)</th>
+                            <th>AÑO 4 (2028)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- INGRESOS -->
+                        <tr class="fin-row-highlight">
+                            <td style="color: white;">VENTAS TOTALES</td>
+                            <td>$2,400,000</td>
+                            <td>$3,840,000</td>
+                            <td>$5,760,000</td>
+                            <td style="color: var(--brand-primary); font-weight: 700;">$8,640,000</td>
+                        </tr>
+                        <tr>
+                            <td>Unidades Vendidas (Est.)</td>
+                            <td>800</td>
+                            <td>1,280</td>
+                            <td>1,920</td>
+                            <td>2,880</td>
+                        </tr>
+                        <tr>
+                            <td>Ticket Promedio</td>
+                            <td>$3,000</td>
+                            <td>$3,000</td>
+                            <td>$3,000</td>
+                            <td>$3,000</td>
+                        </tr>
+                        
+                        <!-- COSTOS -->
+                        <tr>
+                            <td>COGS (Costo de Venta) - 60%</td>
+                            <td class="negative">($1,440,000)</td>
+                            <td class="negative">($2,304,000)</td>
+                            <td class="negative">($3,456,000)</td>
+                            <td class="negative">($5,184,000)</td>
+                        </tr>
+                        <tr class="fin-row-highlight">
+                            <td style="color: #E2E8F0;">MARGEN BRUTO</td>
+                            <td class="positive">$960,000</td>
+                            <td class="positive">$1,536,000</td>
+                            <td class="positive">$2,304,000</td>
+                            <td class="positive">$3,456,000</td>
+                        </tr>
+                        
+                        <!-- GASTOS OPERATIVOS -->
+                        <tr>
+                            <td>Marketing Digital (Ads + SEO)</td>
+                            <td>($180,000)</td>
+                            <td>($240,000)</td>
+                            <td>($300,000)</td>
+                            <td>($360,000)</td>
+                        </tr>
+                        <tr>
+                            <td>Operaciones & Ventas</td>
+                            <td>($300,000)</td>
+                            <td>($400,000)</td>
+                            <td>($550,000)</td>
+                            <td>($700,000)</td>
+                        </tr>
+                        
+                        <!-- UTILIDAD -->
+                        <tr class="fin-row-total">
+                            <td>EBITDA</td>
+                            <td class="positive">$480,000</td>
+                            <td class="positive">$896,000</td>
+                            <td class="positive">$1,454,000</td>
+                            <td class="positive" style="color: var(--brand-primary); font-size: 1.3rem;">$2,396,000</td>
+                        </tr>
+                        <tr>
+                            <td>Margen EBITDA</td>
+                            <td class="data">20%</td>
+                            <td class="data">23%</td>
+                            <td class="data">25%</td>
+                            <td class="data">27%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div class="card-dark" style="text-align: center; padding: 20px;">
+                    <p style="font-size: 0.8rem; text-transform: uppercase;">CAC (Costo Adq.)</p>
+                    <h4 style="color: var(--profit); font-size: 1.5rem;">$225 MXN</h4>
+                </div>
+                <div class="card-dark" style="text-align: center; padding: 20px;">
+                    <p style="font-size: 0.8rem; text-transform: uppercase;">LTV (Lifetime Value)</p>
+                    <h4 style="color: var(--data); font-size: 1.5rem;">$45,000 MXN</h4>
+                </div>
+                <div class="card-dark" style="text-align: center; padding: 20px;">
+                    <p style="font-size: 0.8rem; text-transform: uppercase;">ROI Marketing</p>
+                    <h4 style="color: var(--brand-primary); font-size: 1.5rem;">5.3x</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); background: transparent; border: none; box-shadow: none; padding: 0;">
+                <div class="footer-col">
+                    <h4 style="color: white; margin-bottom: 20px;">LOCKERS JGA</h4>
+                    <p style="color: #94A3B8; font-size: 0.9rem;">Líderes en manufactura de almacenamiento industrial. Acero y PVC de grado ingeniería.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 style="color: white; margin-bottom: 20px;">Navegación</h4>
+                    <a href="#biblia">Especificaciones</a>
+                    <a href="#mercado">Mercado</a>
+                    <a href="#financiero">Finanzas</a>
+                </div>
+                <div class="footer-links">
+                    <h4 style="color: white; margin-bottom: 20px;">Contacto</h4>
+                    <a href="#"><i class="fas fa-envelope"></i> ventas@lockersjga.com</a>
+                    <a href="#"><i class="fas fa-phone"></i> +52 (55) 1234 5678</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> CDMX, México</a>
+                </div>
+            </div>
+            
+            <div class="signature">
+                ESTRATEGIA, DATA & DESARROLLO POR <span style="color: var(--brand-primary); font-weight: 700;">SOMOSLAZARO.MARKETING</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
